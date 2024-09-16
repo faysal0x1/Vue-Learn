@@ -9,7 +9,7 @@
 
             <p>{{ count }}</p>
 
-            <button @click="$emit('decreaseBy', 1)">
+            <button @click="counterStore.decreaseCount(1)">
                 count is: {{ count }}
             </button>
 
@@ -18,13 +18,13 @@
     </div>
 </template>
 <script setup>
+import { useCounterStore } from '@/store/counter';
 import { inject } from 'vue';
-
-
-
 const props = defineProps(['title', 'count']);
 
 const message = inject("message");
+
+const counterStore = useCounterStore();
 
 </script>
 

@@ -1,13 +1,17 @@
 <template>
-  <h1>{{ title }}</h1>
 
-  <Counter v-for="i in 2" :key="i" :title="`Counter ${i}`" :count="count" @increaseBy="increaseCount"
-    @decrease-by="decreaseCount">
-    <div>
-      <p> counter : {{ i }}</p>
-    </div>
-  </Counter>
+  <div class="">
+    <router-link :to="{ name: 'home' }">
+      Home
+    </router-link>
+    <router-link :to="{ name: 'about' }">About</router-link>
+    <router-link :to="{ name: 'service' }">Service</router-link>
+    <router-link :to="{ name: 'contact' }">Contact</router-link>
+  </div>
 
+  <router-view>
+
+  </router-view>
 
 </template>
 
@@ -30,4 +34,8 @@ const decreaseCount = (n) => {
 }
 
 </script>
-<style scoped></style>
+<style scoped>
+a {
+  margin: 10px;
+}
+</style>

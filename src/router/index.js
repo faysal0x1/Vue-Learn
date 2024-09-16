@@ -2,6 +2,7 @@ import About from "@/views/About.vue";
 import Contact from "@/views/Contact.vue";
 import Home from "@/views/Home.vue";
 import Service from "@/views/Service.vue";
+import SingleService from "@/views/SingleService.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
@@ -19,6 +20,11 @@ const routes = [
     path: "/service",
     name: "service",
     component: Service,
+  },
+  {
+    path: "/service/:id",
+    name: "singleService",
+    component: SingleService,
   },
   {
     path: "/contact",

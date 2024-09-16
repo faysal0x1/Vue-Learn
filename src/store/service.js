@@ -78,4 +78,10 @@ export const useserviceStore = defineStore("service", {
       this.services.push(service);
     },
   },
+
+  getters: {
+    ourServices: (state) => {
+      return state.services[0].name + state.services[1].name;
+    },
+  },
 });

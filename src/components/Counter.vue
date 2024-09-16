@@ -7,7 +7,7 @@
                 count is: {{ count }}
             </button>
 
-            <p>{{ count }}</p>
+            <p>{{ count }} / {{ counterStore.doubleCount }}</p>
 
             <button @click="counterStore.decreaseCount(1)">
                 count is: {{ count }}

@@ -13,15 +13,18 @@
                 count is: {{ count }}
             </button>
 
+            {{ message }}
         </div>
     </div>
 </template>
 <script setup>
+import { inject } from 'vue';
 
 
-const props = defineProps(['title','count']);
 
+const props = defineProps(['title', 'count']);
 
+const message = inject("message");
 
 </script>
 

@@ -13,8 +13,11 @@
 
 
 <script setup>
-import { ref } from 'vue'
+import { provide, ref } from 'vue'
 import Counter from './components/Counter.vue';
+
+provide("message", "hello")
+
 let count = ref(0)
 
 const increaseCount = (n) => {
